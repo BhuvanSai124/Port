@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
-  <title>Bhuvan Sai | AI/ML & Data Science Developer</title>
-  <meta name="title" content="Bhuvan Sai | AI/ML & Data Science Developer">
-  <meta name="description" content="Personal developer portfolio of Chintalapati Bhuvan Sai — B.Tech Computer Science student specializing in AI, Machine Learning, Data Science, and Full-Stack Agentic AI applications.">
-  <meta name="keywords" content="Bhuvan Sai, Chintalapati Bhuvan Sai, AI ML Developer, Data Science, Full Stack Developer, Agentic AI, FastAPI, React, Python, RMD Engineering College">
+  <title>Chintalapati Bhuvan Sai | AI/ML Developer & Data Science</title>
+  <meta name="title" content="Chintalapati Bhuvan Sai | AI/ML Developer & Data Science">
+  <meta name="description" content="Personal developer portfolio of Chintalapati Bhuvan Sai — B.Tech Artificial Intelligence & Machine Learning student specializing in AI/ML, Data Science, Generative AI, RAG & LLM Systems, and Cloud.">
+  <meta name="keywords" content="Chintalapati Bhuvan Sai, Bhuvan Sai, AI ML Developer, Data Science, Generative AI, RAG, LLMs, Agentic AI, FastAPI, Python, RMD Engineering College">
   <meta name="author" content="Chintalapati Bhuvan Sai">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bhuvan Sai | AI/ML & Data Science Developer">
-  <meta property="og:description" content="Portfolio of Bhuvan Sai — Computer Science student building AI, Machine Learning, Data Science and full-stack applications.">
+  <meta property="og:title" content="Chintalapati Bhuvan Sai | AI/ML Developer & Data Science">
+  <meta property="og:description" content="Portfolio of Chintalapati Bhuvan Sai — B.Tech student building practical AI systems, ML models, RAG pipelines, and multi-agent applications.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -259,7 +259,7 @@
     .btn-sm { padding: 0.45rem 0.5rem; font-size: 0.8rem; }
     .btn-lg { padding: 0.8rem 1.6rem; font-size: 1rem; }
 
-    /* Badges */
+    /* Badges with Reactive Interactivity */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -269,9 +269,152 @@
       font-size: 0.775rem;
       font-weight: 500;
       padding: 0.2rem 0.55rem;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .badge-default { background-color: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border-subtle); }
-    .badge-accent { background-color: var(--accent-soft); color: var(--accent-primary); border: 1px solid var(--accent-border); }
+    .badge-default {
+      background-color: var(--bg-tertiary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+    .badge-default:hover {
+      transform: translateY(-2px) scale(1.05);
+      background-color: var(--accent-soft);
+      color: var(--text-primary);
+      border-color: var(--accent-border);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    }
+    .badge-accent {
+      background-color: var(--accent-soft);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-border);
+    }
+    .badge-accent:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
+    }
+
+    /* Reactive Subtopics & Cards */
+    .reactive-subcard {
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.28s ease,
+                  box-shadow 0.28s ease,
+                  background-color 0.28s ease;
+      cursor: pointer;
+    }
+    .reactive-subcard:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: var(--accent-border) !important;
+      box-shadow: var(--shadow-glow);
+      background-color: var(--bg-card) !important;
+    }
+
+    /* Reactive Achievement Badges & Icons — Pure Monochrome Theme Reaction */
+    .achievement-icon-reactive {
+      width: 46px;
+      height: 46px;
+      border-radius: 0.625rem;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.3s ease,
+                  border-color 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+    .achievement-icon-reactive img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* Dark Theme Hover: Crisp White Glow & Border */
+    .achievement-icon-reactive:hover {
+      transform: translateY(-4px) scale(1.12);
+      border-color: rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.45), 0 4px 12px rgba(255, 255, 255, 0.25) !important;
+    }
+    /* Light Theme Hover: Vice Versa (Dark Slate / Black Glow & Border) */
+    [data-theme="light"] .achievement-icon-reactive:hover {
+      border-color: rgba(15, 23, 42, 0.85) !important;
+      box-shadow: 0 0 18px rgba(15, 23, 42, 0.28), 0 4px 10px rgba(15, 23, 42, 0.15) !important;
+    }
+    .achievement-icon-reactive:hover img {
+      transform: scale(1.08);
+    }
+    .achievement-icon-reactive:active {
+      transform: scale(0.96);
+    }
+    /* Subtle reaction when parent card is hovered */
+    .card-base:hover .achievement-icon-reactive {
+      transform: translateY(-2px) scale(1.05);
+      border-color: rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+    [data-theme="light"] .card-base:hover .achievement-icon-reactive {
+      border-color: rgba(15, 23, 42, 0.35);
+      box-shadow: 0 0 10px rgba(15, 23, 42, 0.12);
+    }
+    .card-base:hover .achievement-icon-reactive:hover {
+      transform: translateY(-4px) scale(1.14);
+    }
+
+    /* Siren Beacon Light Animation (Muted & Visual Only, No Sound) */
+    .siren-beacon-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+    .siren-light {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444, 0 0 16px #f87171, 0 0 24px #f43f5e;
+      animation: sirenFlash 0.9s infinite ease-in-out;
+    }
+    .siren-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(239, 68, 68, 0.8);
+      animation: sirenWave 0.9s infinite ease-out;
+    }
+    @keyframes sirenFlash {
+      0%, 100% {
+        background-color: #ef4444;
+        box-shadow: 0 0 5px #ef4444, 0 0 12px #f87171;
+        transform: scale(0.9);
+      }
+      50% {
+        background-color: #fca5a5;
+        box-shadow: 0 0 12px #f87171, 0 0 22px #ef4444, 0 0 32px #f43f5e;
+        transform: scale(1.25);
+      }
+    }
+    @keyframes sirenWave {
+      0% {
+        transform: scale(0.6);
+        opacity: 1;
+        border-color: rgba(239, 68, 68, 0.9);
+      }
+      100% {
+        transform: scale(2.3);
+        opacity: 0;
+        border-color: rgba(239, 68, 68, 0);
+      }
+    }
 
     /* Section Header */
     .section-header { margin-bottom: 2.75rem; }
@@ -466,19 +609,16 @@
       <!-- Brand Name with Interactive Dynamic Fire Emoji Particles Hover Animation -->
       <a href="#home" class="brand-link" id="brandHeaderLink">
         <div class="brand-logo-badge" style="width: 34px; height: 34px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; transition: all var(--transition-fast);">
-          BS
+          BC
         </div>
-        <span class="brand-text" style="color: var(--text-primary); transition: color var(--transition-fast);">Bhuvan Sai</span>
+        <span class="brand-text" style="color: var(--text-primary); transition: color var(--transition-fast);">Bhuvan Chintalapati</span>
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link active">Home</a>
+      <nav class="nav-links" id="navLinks" style="margin-left: auto; margin-right: 2.25rem;">
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -513,11 +653,11 @@
             </div>
 
             <h1 style="font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem;">
-              Hi, I'm Bhuvan Sai.
+              Hi, I'm Chintalapati Bhuvan Sai.
             </h1>
 
             <p style="font-family: var(--font-mono); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--accent-primary); font-weight: 600; margin-bottom: 1.25rem;">
-              AI/ML Enthusiast · Data Science · Full-Stack Developer · Agentic AI
+              AI/ML Developer · Data Science · Generative AI · RAG & LLM Systems · Cloud
             </p>
 
             <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; max-width: 650px; margin-bottom: 2rem;">
@@ -572,34 +712,34 @@
       <div class="container">
         <div class="grid-4">
           <div class="card-base" style="display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem;">
+            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">🐍</div>
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Core Language</span>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">PYTHON</span>
+            </div>
+          </div>
+
+          <div class="card-base" style="display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem;">
             <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">🧠</div>
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Focus</span>
-              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">AI / ML / Data Science</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Discipline</span>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">AI/ML base Data Science</span>
             </div>
           </div>
 
           <div class="card-base" style="display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem;">
-            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">✨</div>
+            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">☁️</div>
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Currently Learning</span>
-              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">Agentic AI / MLOps / Cloud</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Infrastructure</span>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">CLOUD and MLOps</span>
             </div>
           </div>
 
           <div class="card-base" style="display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem;">
-            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">💻</div>
+            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">⚡</div>
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Development</span>
-              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">Full-Stack AI Applications</span>
-            </div>
-          </div>
-
-          <div class="card-base" style="display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem;">
-            <div style="width: 42px; height: 42px; border-radius: 0.5rem; background: var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--text-primary); flex-shrink: 0; font-size: 1.2rem;">📍</div>
-            <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">Location</span>
-              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">Nuzvid, AP, India</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block;">AI Architecture</span>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem; display: block;">LLM's and RAG pipelines</span>
             </div>
           </div>
         </div>
@@ -612,35 +752,35 @@
         <div class="section-header">
           <div class="section-tag">// 01</div>
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Passionate about turning raw datasets and theoretical machine learning into real-world, production-ready software applications.</p>
+          <p class="section-subtitle">Passionate about transforming data, machine learning, and emerging AI technologies into practical, production-ready intelligent systems.</p>
         </div>
 
         <div class="grid-2" style="align-items: start; gap: 2.5rem;">
           <div style="display: flex; flex-direction: column; gap: 1.25rem;">
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
-              I am a third-year B.Tech student in <strong>Artificial Intelligence and Machine Learning</strong> at <strong>R.M.D. Engineering College</strong>. My technical focus centers on practical machine learning, data engineering, RESTful API architecture, and full-stack software development.
+              I am a third-year B.Tech student in <strong>Artificial Intelligence and Machine Learning</strong> at <strong>R.M.D. Engineering College</strong>. My technical focus centers on AI/ML, Data Science, Generative AI, RAG & LLM Systems, Cloud, and MLOps.
             </p>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
-              Instead of relying strictly on theoretical exercises, I prioritize building end-to-end applications — from ingesting structured data, engineering features, and training Scikit-Learn models to deploying FastAPI services containerized with Docker on cloud platforms.
+              Building practical AI systems — from data preparation and ML models to LLM pipelines, RAG, agentic workflows, APIs, and cloud deployment.
             </p>
 
             <div class="core-objective-card" id="coreObjectiveCard">
               <span class="core-obj-title" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-primary); font-weight: 700; display: block; margin-bottom: 0.35rem; transition: all var(--transition-fast);">🎯 CORE OBJECTIVE</span>
               <p style="font-size: 0.95rem; color: var(--text-primary); font-style: italic; transition: color var(--transition-fast);">
-                "Seeking AI/ML, Data Science, Data Analytics, and Backend internship opportunities."
+                "Seeking AI/ML and Generative AI internship opportunities to build practical intelligent systems and gain production experience."
               </p>
             </div>
           </div>
 
           <div class="card-base" style="padding: 1.75rem;">
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Development Journey</h3>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">AI Development Journey</h3>
             
             <div style="display: flex; flex-direction: column; gap: 1.25rem;">
               <div style="display: flex; gap: 1rem; align-items: flex-start;">
                 <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.25rem 0.6rem; border-radius: 0.375rem;">01</span>
                 <div>
                   <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Learn</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary);">Forming core mathematical & algorithmic foundations in AI, ML, and Data Science.</p>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">AI, ML, Data Science & foundations</p>
                 </div>
               </div>
 
@@ -648,23 +788,23 @@
                 <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.25rem 0.6rem; border-radius: 0.375rem;">02</span>
                 <div>
                   <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Build</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary);">Developing real-world full-stack platforms with Python, Scikit-learn, FastAPI & React.</p>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">ML, Generative AI, RAG, LLMs & Agentic AI</p>
                 </div>
               </div>
 
               <div style="display: flex; gap: 1rem; align-items: flex-start;">
                 <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.25rem 0.6rem; border-radius: 0.375rem;">03</span>
                 <div>
-                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Deploy</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary);">Containerizing backend services with Docker and deploying to cloud infrastructure.</p>
+                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Engineer</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">AI pipelines, APIs, LangChain, LangGraph & Docker</p>
                 </div>
               </div>
 
               <div style="display: flex; gap: 1rem; align-items: flex-start;">
                 <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.25rem 0.6rem; border-radius: 0.375rem;">04</span>
                 <div>
-                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Improve</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary);">Refining model accuracy, API performance, data pipelines, and UI experiences.</p>
+                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Deploy</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">Cloud, MLOps, monitoring & continuous improvement</p>
                 </div>
               </div>
             </div>
@@ -673,117 +813,297 @@
       </div>
     </section>
 
-    <!-- EXPLORATORY FOCUS -->
+    <!-- CURRENT AI FOCUS SECTION -->
     <section style="padding-bottom: 3.5rem;">
       <div class="container">
         <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 1rem; padding: 2rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
             <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
-              ✨ Exploratory Focus & Currently Learning
+              ✨ Current AI Focus
             </h3>
             <span style="font-family: var(--font-mono); font-size: 0.775rem; color: var(--text-muted);">
-              ℹ️ Current learning areas separate from verified resume credentials
+              ℹ️ Exploring emerging AI architectures through practical projects
             </span>
           </div>
 
           <div class="grid-4">
-            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle);">
-              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Agentic AI Frameworks</h4>
-              <p style="font-size: 0.825rem; color: var(--text-secondary);">Exploring multi-agent orchestration, tool integration, and autonomous reasoning workflows.</p>
+            <div class="reactive-subcard" style="padding: 1.25rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: space-between;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Agentic AI & Multi-Agent Systems</h4>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Building autonomous agents, multi-agent orchestration, tool use, and workflow automation.</p>
             </div>
 
-            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle);">
-              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">MLOps Pipelines</h4>
-              <p style="font-size: 0.825rem; color: var(--text-secondary);">Building reproducible model training, version control, and containerized serving pipelines.</p>
+            <div class="reactive-subcard" style="padding: 1.25rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: space-between;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">AI Reasoning & LLM Systems</h4>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Exploring reasoning models, LLM pipelines, structured outputs, and intelligent decision-making.</p>
             </div>
 
-            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle);">
-              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Cloud Infrastructure</h4>
-              <p style="font-size: 0.825rem; color: var(--text-secondary);">Deepening knowledge of Microsoft Azure services, cloud deployments, and backend scalability.</p>
+            <div class="reactive-subcard" style="padding: 1.25rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: space-between;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">RAG & LLM Applications</h4>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Building contextual AI with retrieval, vector search, and grounded generation.</p>
             </div>
 
-            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle);">
-              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">RAG & LLM Architectures</h4>
-              <p style="font-size: 0.825rem; color: var(--text-secondary);">Investigating contextual document retrieval, vector databases, and prompt optimization.</p>
+            <div class="reactive-subcard" style="padding: 1.25rem; background: var(--bg-tertiary); border-radius: 0.625rem; border: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: space-between;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">MLOps & AI Deployment</h4>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Exploring model deployment, containerization, reproducible pipelines, and cloud-based AI systems.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section-padding">
+    <!-- CORE EXPERTISE SECTION -->
+    <section id="expertise" class="section-padding">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">// 02</div>
+          <h2 class="section-title">Core Expertise</h2>
+          <p class="section-subtitle">Core technical pillars defining my practical development and engineering focus.</p>
+        </div>
+
+        <div class="grid-4" style="gap: 1.25rem;">
+          <!-- 01: Python Development -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">01</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Python Development</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">OOP, Modular Architectures, Scripting & Backend Integration</p>
+            </div>
+          </div>
+
+          <!-- 02: Data Science -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">02</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Data Science</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Exploratory Data Analysis, Feature Engineering & Statistical Modeling</p>
+            </div>
+          </div>
+
+          <!-- 03: SQL & Data Management -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">03</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">SQL & Data Management</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Relational Schemas, Complex Queries, Indexing & Database Design</p>
+            </div>
+          </div>
+
+          <!-- 04: Artificial Intelligence -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">04</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Artificial Intelligence</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Machine Learning Algorithms, Deep Learning & Predictive Modeling</p>
+            </div>
+          </div>
+
+          <!-- 05: Generative AI -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">05</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Generative AI</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Foundation Models, Prompt Engineering & Grounded Generation</p>
+            </div>
+          </div>
+
+          <!-- 06: LLM Applications -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">06</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">LLM Applications</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">RAG Pipelines, Vector Search, Embedding Systems & FastAPI Endpoints</p>
+            </div>
+          </div>
+
+          <!-- 07: Agentic AI & Workflows -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">07</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Agentic AI & Workflows</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Autonomous Agents, Multi-Agent Orchestration, Tool Calling & State Machines</p>
+            </div>
+          </div>
+
+          <!-- 08: Microsoft Azure -->
+          <div class="card-base reactive-subcard" style="padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.15rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--accent-border);">08</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Microsoft Azure</h3>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Cloud AI Services, Infrastructure Management & Scalable Deployment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 03</div>
           <h2 class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">Categorized inventory of programming languages, frameworks, databases, and cloud tools strictly verified from my resume.</p>
+          <p class="section-subtitle">Categorized inventory of programming languages, AI/ML tools, frameworks, databases, and deployment platforms.</p>
         </div>
 
-        <!-- Filter Buttons for Skill Categories -->
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.25rem;">
-          <button onclick="filterSkills('all')" class="filter-tab active" data-skill-tab="all">All Categories</button>
-          <button onclick="filterSkills('aiml')" class="filter-tab" data-skill-tab="aiml">AI & ML</button>
-          <button onclick="filterSkills('data')" class="filter-tab" data-skill-tab="data">Data & Analytics</button>
-          <button onclick="filterSkills('web')" class="filter-tab" data-skill-tab="web">Web & Backend</button>
-          <button onclick="filterSkills('cloud')" class="filter-tab" data-skill-tab="cloud">Cloud & MLOps</button>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
-          <!-- AI / ML -->
-          <div class="card-base skill-category-card" data-skill-cat="aiml">
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--accent-primary); font-family: var(--font-mono);">//</span> AI & Machine Learning
-            </h3>
-            <div class="grid-3">
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Artificial Intelligence</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Core</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Machine Learning</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Applied</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Scikit-Learn</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Framework</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Generative AI</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Practical</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">LLMs & RAG</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Exposure</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Pandas & NumPy</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Data Prep</span></div>
+        <div class="grid-2" style="gap: 1.5rem;">
+          <!-- 01: Programming -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">01</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Programming</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Python</span>
+              <span class="badge badge-default">Java</span>
+              <span class="badge badge-default">SQL</span>
+              <span class="badge badge-default">JavaScript</span>
             </div>
           </div>
 
-          <!-- Data & Analytics -->
-          <div class="card-base skill-category-card" data-skill-cat="data">
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--accent-primary); font-family: var(--font-mono);">//</span> Data & Analytics
-            </h3>
-            <div class="grid-3">
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Data Analytics</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Core</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">SQL</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Queries</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Power BI</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Dashboards</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Tableau</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Visualization</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Excel & Google Sheets</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Reporting</span></div>
+          <!-- 02: AI / Machine Learning -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">02</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">AI / Machine Learning</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Machine Learning</span>
+              <span class="badge badge-default">Deep Learning</span>
+              <span class="badge badge-default">NLP</span>
+              <span class="badge badge-default">Feature Engineering</span>
+              <span class="badge badge-default">Model Evaluation</span>
+              <span class="badge badge-default">Scikit-learn</span>
             </div>
           </div>
 
-          <!-- Web & Backend -->
-          <div class="card-base skill-category-card" data-skill-cat="web">
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--accent-primary); font-family: var(--font-mono);">//</span> Web & Backend Development
-            </h3>
-            <div class="grid-3">
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Python</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Primary</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">FastAPI</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Backend API</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">React & JavaScript</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Frontend</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Java</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Language</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">SQLite & SQLAlchemy</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Database/ORM</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">HTML & CSS</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Web</span></div>
+          <!-- 03: Data Science -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">03</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Data Science</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Pandas</span>
+              <span class="badge badge-default">NumPy</span>
+              <span class="badge badge-default">Data Analysis</span>
+              <span class="badge badge-default">Data Preprocessing</span>
+              <span class="badge badge-default">Data Visualization</span>
             </div>
           </div>
 
-          <!-- Cloud & Tools -->
-          <div class="card-base skill-category-card" data-skill-cat="cloud">
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--accent-primary); font-family: var(--font-mono);">//</span> Cloud, MLOps & Developer Tools
-            </h3>
-            <div class="grid-3">
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Microsoft Azure</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Cloud</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Docker</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Containers</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">Git & GitHub</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">VCS</span></div>
-              <div style="display: flex; justify-content: space-between; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;"><span style="font-size: 0.9rem; font-weight: 600;">VS Code & Jupyter</span><span class="font-mono" style="font-size: 0.725rem; color: var(--text-muted); background: var(--bg-primary); padding: 0.15rem 0.4rem; border-radius: 0.25rem;">IDE</span></div>
+          <!-- 04: Generative AI -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">04</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Generative AI</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Generative AI</span>
+              <span class="badge badge-default">LLMs</span>
+              <span class="badge badge-default">RAG</span>
+              <span class="badge badge-default">Prompt Engineering</span>
+              <span class="badge badge-default">Agentic AI</span>
+            </div>
+          </div>
+
+          <!-- 05: LLM & AI Frameworks -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">05</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">LLM & AI Frameworks</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">LangChain</span>
+              <span class="badge badge-default">LangGraph</span>
+              <span class="badge badge-default">FastAPI</span>
+              <span class="badge badge-default">LLM Pipelines</span>
+            </div>
+          </div>
+
+          <!-- 06: Retrieval & AI Systems -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">06</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Retrieval & AI Systems</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Vector Search</span>
+              <span class="badge badge-default">Embeddings</span>
+              <span class="badge badge-default">Semantic Search</span>
+              <span class="badge badge-default">Retrieval Pipelines</span>
+            </div>
+          </div>
+
+          <!-- 07: Databases -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">07</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Databases</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">SQL (Certified)</span>
+              <span class="badge badge-default">MongoDB</span>
+              <span class="badge badge-default">SQLite</span>
+              <span class="badge badge-default">SQLAlchemy</span>
+            </div>
+          </div>
+
+          <!-- 08: Cloud & MLOps -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">08</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Cloud & MLOps</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Microsoft Azure</span>
+              <span class="badge badge-default">Docker</span>
+              <span class="badge badge-default">MLOps</span>
+              <span class="badge badge-default">Model Deployment</span>
+              <span class="badge badge-default">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- 09: Web Technologies -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">09</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Web Technologies</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">HTML</span>
+              <span class="badge badge-default">CSS</span>
+              <span class="badge badge-default">JavaScript</span>
+              <span class="badge badge-default">API Integration</span>
+            </div>
+          </div>
+
+          <!-- 10: Development Tools -->
+          <div class="card-base reactive-subcard" style="padding: 1.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); border: 1px solid var(--accent-border); padding: 0.15rem 0.45rem; border-radius: 0.35rem;">10</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Development Tools</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span class="badge badge-default">Git</span>
+              <span class="badge badge-default">GitHub</span>
+              <span class="badge badge-default">VS Code</span>
+              <span class="badge badge-default">Jupyter Notebook</span>
             </div>
           </div>
         </div>
@@ -794,70 +1114,129 @@
     <section id="projects" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">// 03</div>
+          <div class="section-tag">// 04</div>
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Production-oriented AI, Machine Learning, and Full-Stack platforms developed with FastAPI, React, Python, and local-first ML architectures.</p>
+          <p class="section-subtitle">Production-oriented AI systems, multi-agent orchestration architectures, and practical machine learning platforms.</p>
         </div>
 
         <!-- Category Filter Tabs for Projects -->
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.25rem;">
           <button onclick="filterProjects('all')" class="filter-tab active" data-proj-tab="all">All Projects</button>
+          <button onclick="filterProjects('agentic')" class="filter-tab" data-proj-tab="agentic">Agentic AI</button>
           <button onclick="filterProjects('aiml')" class="filter-tab" data-proj-tab="aiml">AI / ML</button>
           <button onclick="filterProjects('fullstack')" class="filter-tab" data-proj-tab="fullstack">Full Stack</button>
           <button onclick="filterProjects('analytics')" class="filter-tab" data-proj-tab="analytics">Data Science</button>
         </div>
 
-                <div class="grid-3" style="align-items: stretch; gap: 1.75rem;">
+        <div class="grid-3" style="align-items: stretch; gap: 1.75rem;">
           
-          <!-- PROJECT 1: IPLYTICS AI -->
-          <div class="card-base project-card" data-proj-cat="aiml" style="display: flex; flex-direction: column; height: 100%; border-color: var(--border-strong); box-shadow: var(--shadow-glow);">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+          <!-- PROJECT 1: AUTONOMOUS MULTI-AGENT DATA SCIENTIST -->
+          <div class="card-base project-card" data-proj-cat="agentic analytics aiml" style="display: flex; flex-direction: column; height: 100%; border-color: rgba(239, 68, 68, 0.4); box-shadow: 0 0 20px rgba(239, 68, 68, 0.12);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem; min-height: 28px;">
               <div style="display: flex; align-items: center; gap: 0.6rem;">
                 <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">01</span>
-                <span class="badge badge-accent">AI/ML</span>
+                <span class="badge badge-accent">Autonomous AI</span>
+                <span class="badge badge-accent">✨ Featured</span>
               </div>
-              <span class="badge badge-accent">✨ Featured</span>
+              <span class="font-mono" style="display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; color: #f87171; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.35); padding: 0.2rem 0.55rem; border-radius: 0.375rem; white-space: nowrap; font-weight: 600;">
+                <span class="siren-beacon-wrapper">
+                  <span class="siren-light"></span>
+                  <span class="siren-ring"></span>
+                </span>
+                <span>Present</span>
+              </span>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">IPLYTICS AI</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem;">Cricket Match Prediction & Analytics Platform</p>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
-              Machine-learning prediction engine trained on 10+ seasons of ball-by-ball IPL match data (>250,000 deliveries). Achieved <strong>83.4% outcome prediction accuracy</strong> (0.87 ROC-AUC) using Scikit-Learn/XGBoost, with Dockerized FastAPI endpoints delivering live inference in <strong>&lt;90ms latency</strong>.
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.3; min-height: 3.5rem; display: flex; align-items: flex-start;">
+              Autonomous Multi-Agent Data Scientist
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem; line-height: 1.4; min-height: 2.5rem; display: flex; align-items: flex-start;">
+              Autonomous AI Data Science System
+            </p>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; min-height: 6.8rem;">
+              An agentic AI data science system that autonomously understands datasets, performs data quality analysis, preprocessing, EDA, feature engineering, model selection, training, evaluation, and insight generation, while using LLM reasoning and RAG-based knowledge retrieval to dynamically plan and improve the workflow.
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; min-height: 4.8rem; align-content: flex-start;">
               <span class="badge badge-default">Python</span>
-              <span class="badge badge-default">FastAPI</span>
-              <span class="badge badge-default">SQL</span>
-              <span class="badge badge-default">Scikit-Learn</span>
-              <span class="badge badge-default">Docker</span>
-              <span class="badge badge-default">Render</span>
+              <span class="badge badge-default">LangGraph</span>
+              <span class="badge badge-default">LangChain</span>
+              <span class="badge badge-default">Pandas</span>
+              <span class="badge badge-default">Scikit-learn</span>
+              <span class="badge badge-default">Agentic AI</span>
             </div>
 
-            <!-- Single Line Aligned Action Buttons -->
-            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%;">
-              <button onclick="openModal('modal-iplytics')" class="btn btn-primary btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Case Study</button>
-              <a href="https://github.com/BhuvanSai124/IPL-anlaytics" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
-              <a href="https://ipl-analytics-dashboard-ioh7.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Live Demo 🔗</a>
+            <!-- Single Line Aligned Development Indicator Bar with Siren Light -->
+            <div style="display: flex; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%; min-height: 46px;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.45rem 1rem; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 0.5rem; width: 100%; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: #fca5a5; letter-spacing: 0.02em;">
+                <span class="siren-beacon-wrapper">
+                  <span class="siren-light"></span>
+                  <span class="siren-ring"></span>
+                </span>
+                <span>Active Development In Progress</span>
+              </div>
             </div>
           </div>
 
-          <!-- PROJECT 2: FINPILOT AI -->
-          <div class="card-base project-card" data-proj-cat="fullstack" style="display: flex; flex-direction: column; height: 100%;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+          <!-- PROJECT 2: TRAVION -->
+          <div class="card-base project-card" data-proj-cat="agentic fullstack" style="display: flex; flex-direction: column; height: 100%; border-color: var(--border-strong); box-shadow: var(--shadow-glow);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem; min-height: 28px;">
               <div style="display: flex; align-items: center; gap: 0.6rem;">
                 <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">02</span>
-                <span class="badge badge-default">Full Stack</span>
+                <span class="badge badge-accent">Agentic AI</span>
+                <span class="badge badge-accent">✨ Featured</span>
               </div>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.2rem 0.55rem; border-radius: 0.375rem; white-space: nowrap;">August 2026 – Present</span>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">FinPilot AI</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem;">Full-Stack Financial Learning & Analytics Platform</p>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.3; min-height: 3.5rem; display: flex; align-items: flex-start;">
+              TRAVION
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem; line-height: 1.4; min-height: 2.5rem; display: flex; align-items: flex-start;">
+              AI-Powered End-to-End Travel Companion
+            </p>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; min-height: 6.8rem;">
+              An intelligent travel platform that combines AI itinerary planning, dynamic trip re-planning, real-time travel assistance, location services, and personalized recommendations into a persistent trip experience.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; min-height: 4.8rem; align-content: flex-start;">
+              <span class="badge badge-default">React Native</span>
+              <span class="badge badge-default">Expo</span>
+              <span class="badge badge-default">TypeScript</span>
+              <span class="badge badge-default">FastAPI</span>
+              <span class="badge badge-default">MySQL</span>
+              <span class="badge badge-default">Agentic AI</span>
+            </div>
+
+            <!-- Single Line Aligned Action Buttons -->
+            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%; min-height: 46px;">
+              <button onclick="openModal('modal-travion')" class="btn btn-primary btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Case Study</button>
+              <a href="https://github.com/BhuvanSai124" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
+              <a href="https://travions.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Live Demo 🔗</a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: FINPILOT AI -->
+          <div class="card-base project-card" data-proj-cat="fullstack" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem; min-height: 28px;">
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">03</span>
+                <span class="badge badge-default">Full Stack</span>
+              </div>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.2rem 0.55rem; border-radius: 0.375rem; white-space: nowrap;">Jul 2026 – Sep 2026</span>
+            </div>
+
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.3; min-height: 3.5rem; display: flex; align-items: flex-start;">
+              FinPilot AI
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem; line-height: 1.4; min-height: 2.5rem; display: flex; align-items: flex-start;">
+              Full-Stack Financial Learning & Analytics Platform
+            </p>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; min-height: 6.8rem;">
               Full-stack financial simulation platform built with FastAPI, React, and SQLite via SQLAlchemy. Features bcrypt + JWT session authentication and mathematical modeling algorithms (compound growth, SIP forecasting, risk profiling) executing in <strong>&lt;50ms</strong> across 10+ asset classes.
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; min-height: 4.8rem; align-content: flex-start;">
               <span class="badge badge-default">React</span>
               <span class="badge badge-default">FastAPI</span>
               <span class="badge badge-default">SQLite</span>
@@ -866,29 +1245,34 @@
             </div>
 
             <!-- Single Line Aligned Action Buttons -->
-            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%;">
+            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%; min-height: 46px;">
               <button onclick="openModal('modal-finpilot')" class="btn btn-primary btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Case Study</button>
-              <a href="https://github.com/BhuvanSai124/Fin-Pilot" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
+              <a href="https://github.com/BhuvanSai124" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
               <a href="https://finpilot-stocks.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Live Demo 🔗</a>
             </div>
           </div>
 
-          <!-- PROJECT 3: INSIGHT AI -->
-          <div class="card-base project-card" data-proj-cat="analytics" style="display: flex; flex-direction: column; height: 100%;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+          <!-- PROJECT 4: INSIGHT AI -->
+          <div class="card-base project-card" data-proj-cat="analytics aiml" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem; min-height: 28px;">
               <div style="display: flex; align-items: center; gap: 0.6rem;">
-                <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">03</span>
-                <span class="badge badge-default">AI / Data Science</span>
+                <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">04</span>
+                <span class="badge badge-default">Data Science</span>
               </div>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.2rem 0.55rem; border-radius: 0.375rem; white-space: nowrap;">Apr 2026 – Jun 2026</span>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">Insight AI</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem;">Offline-Capable, Local-First AI Analytics & Vector Retrieval Platform</p>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.3; min-height: 3.5rem; display: flex; align-items: flex-start;">
+              Insight AI
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem; line-height: 1.4; min-height: 2.5rem; display: flex; align-items: flex-start;">
+              Offline-Capable, Local-First AI Analytics & Vector Retrieval Platform
+            </p>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; min-height: 6.8rem;">
               Offline-capable, local-first AI data intelligence platform supporting CSV, XLSX, and JSON datasets up to 100MB+. Features local embedding-based document retrieval, Scikit-learn automated pipelines, and heuristic query synthesis with 0 external API dependencies and <strong>65% faster exploratory query turnaround</strong>.
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; min-height: 4.8rem; align-content: flex-start;">
               <span class="badge badge-default">Python</span>
               <span class="badge badge-default">FastAPI</span>
               <span class="badge badge-default">Scikit-Learn</span>
@@ -898,13 +1282,49 @@
             </div>
 
             <!-- Single Line Aligned Action Buttons -->
-            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%;">
+            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%; min-height: 46px;">
               <button onclick="openModal('modal-insight')" class="btn btn-primary btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Case Study</button>
               <a href="https://github.com/BhuvanSai124/InSight-AI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
               <a href="https://insightt-ai.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Live Demo 🔗</a>
             </div>
           </div>
 
+          <!-- PROJECT 5: IPLYTICS AI -->
+          <div class="card-base project-card" data-proj-cat="aiml" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem; min-height: 28px;">
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="font-mono" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">05</span>
+                <span class="badge badge-default">AI/ML</span>
+              </div>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.2rem 0.55rem; border-radius: 0.375rem; white-space: nowrap;">Jan 2026 – Feb 2026</span>
+            </div>
+
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.3; min-height: 3.5rem; display: flex; align-items: flex-start;">
+              IPLYTICS AI
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem; line-height: 1.4; min-height: 2.5rem; display: flex; align-items: flex-start;">
+              Cricket Match Prediction & Analytics Platform
+            </p>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; min-height: 6.8rem;">
+              Machine-learning prediction engine trained on 10+ seasons of ball-by-ball IPL match data (>250,000 deliveries). Achieved <strong>83.4% outcome prediction accuracy</strong> (0.87 ROC-AUC) using Scikit-Learn/XGBoost, with Dockerized FastAPI endpoints delivering live inference in <strong>&lt;90ms latency</strong>.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; min-height: 4.8rem; align-content: flex-start;">
+              <span class="badge badge-default">Python</span>
+              <span class="badge badge-default">FastAPI</span>
+              <span class="badge badge-default">SQL</span>
+              <span class="badge badge-default">Scikit-Learn</span>
+              <span class="badge badge-default">Docker</span>
+              <span class="badge badge-default">Render</span>
+            </div>
+
+            <!-- Single Line Aligned Action Buttons -->
+            <div style="display: flex; align-items: center; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%; min-height: 46px;">
+              <button onclick="openModal('modal-iplytics')" class="btn btn-primary btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Case Study</button>
+              <a href="https://github.com/BhuvanSai124/IPL-anlaytics" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">GitHub</a>
+              <a href="https://ipl-analytics-dashboard-ioh7.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex: 1; white-space: nowrap; justify-content: center;">Live Demo 🔗</a>
+            </div>
+          </div>
         </div>
 
         <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--bg-card); border-radius: 1rem; border: 1px solid var(--border-subtle);">
@@ -915,23 +1335,141 @@
       </div>
     </section>
 
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 05</div>
+          <div style="margin-bottom: 0.85rem;">
+            <span class="badge badge-accent" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;">ACHIEVEMENTS</span>
+          </div>
+          <h2 class="section-title">Recognition & Honours</h2>
+          <p class="section-subtitle">National and institutional recognitions celebrating innovative engineering, competition excellence, and academic distinction.</p>
+        </div>
+
+        <div class="grid-3" style="align-items: stretch; gap: 1.5rem;">
+          
+          <!-- ACHIEVEMENT 1: SIH 2026 -->
+          <div class="card-base" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 1.5rem; border-color: var(--border-subtle); transition: all var(--transition-normal);">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <div class="achievement-icon-reactive" onclick="openModal('modal-sih')" title="Smart India Hackathon 2026 — Click to view details" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('modal-sih')">
+                  <img src="sih-logo.png" alt="Smart India Hackathon Logo">
+                </div>
+                <span class="badge badge-default" style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.6rem;">NATIONAL</span>
+              </div>
+
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.45rem; line-height: 1.35; min-height: 3.1rem; display: flex; align-items: flex-start;">
+                Smart India Hackathon 2026
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.85rem; min-height: 2.6rem; display: flex; align-items: flex-start;">
+                Nominated For National Evaluation • Ministry of Education, Govt. of India
+              </p>
+              <div style="margin-bottom: 1.25rem;">
+                <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--border-subtle);">Project: TRAVION</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.9rem; border-top: 1px solid var(--border-subtle); gap: 0.4rem; white-space: nowrap; min-height: 42px;">
+              <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 600; color: #f59e0b; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink: 0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Nominated For National Evaluation</span>
+              </span>
+              <button type="button" onclick="openModal('modal-sih')" class="btn btn-outline btn-sm" style="font-size: 0.725rem; padding: 0.28rem 0.6rem; border-radius: 0.375rem; white-space: nowrap; flex-shrink: 0; cursor: pointer;">View details ↗</button>
+            </div>
+          </div>
+
+          <!-- ACHIEVEMENT 2: MSME Innovation Challenge -->
+          <div class="card-base" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 1.5rem; border-color: var(--border-subtle); transition: all var(--transition-normal);">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <div class="achievement-icon-reactive" onclick="openModal('modal-msme')" title="MSME Innovation Challenge — Click to view details" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('modal-msme')">
+                  <img src="msme-logo.png" alt="Ministry of MSME Logo">
+                </div>
+                <span class="badge badge-default" style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.6rem;">COLLEGE</span>
+              </div>
+
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.45rem; line-height: 1.35; min-height: 3.1rem; display: flex; align-items: flex-start;">
+                MSME Innovation Challenge
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.85rem; min-height: 2.6rem; display: flex; align-items: flex-start;">
+                College Level • Ministry of MSME, Govt. of India
+              </p>
+              <div style="margin-bottom: 1.25rem;">
+                <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--border-subtle);">Project: AIRA</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.9rem; border-top: 1px solid var(--border-subtle); gap: 0.4rem; white-space: nowrap; min-height: 42px;">
+              <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 600; color: #818cf8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink: 0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>College Level</span>
+              </span>
+              <button type="button" onclick="openModal('modal-msme')" class="btn btn-outline btn-sm" style="font-size: 0.725rem; padding: 0.28rem 0.6rem; border-radius: 0.375rem; white-space: nowrap; flex-shrink: 0; cursor: pointer;">View details ↗</button>
+            </div>
+          </div>
+
+          <!-- ACHIEVEMENT 3: Srinivasa Ramanujan Maths Competition -->
+          <div class="card-base" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 1.5rem; border-color: var(--border-subtle); transition: all var(--transition-normal);">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <a href="math.pdf" target="_blank" rel="noopener noreferrer" class="achievement-icon-reactive" title="Srinivasa Ramanujan Mathematical Competitions — Click to view certificate">
+                  <img src="iste-logo.png" alt="ISTE Logo">
+                </a>
+                <span class="badge badge-default" style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.6rem;">NATIONAL</span>
+              </div>
+
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.45rem; line-height: 1.35; min-height: 3.1rem; display: flex; align-items: flex-start;">
+                Srinivasa Ramanujan Mathematical Competitions 2025–26
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.85rem; min-height: 2.6rem; display: flex; align-items: flex-start;">
+                National Level • Indian Society for Technical Education (ISTE), Tamilnadu Section
+              </p>
+              <div style="margin-bottom: 1.25rem;">
+                <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 0.35rem; border: 1px solid var(--border-subtle);">Domain: Mathematics & Logic</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.9rem; border-top: 1px solid var(--border-subtle); gap: 0.4rem; white-space: nowrap; min-height: 42px;">
+              <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 600; color: #10b981; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink: 0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>National Level</span>
+              </span>
+              <a href="math.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size: 0.725rem; padding: 0.28rem 0.6rem; border-radius: 0.375rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.3rem; flex-shrink: 0;" title="View Certificate">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Click to view ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- EXPERIENCE SECTION -->
     <section id="experience" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">// 04</div>
+          <div class="section-tag">// 06</div>
           <h2 class="section-title">Practical Experience</h2>
           <p class="section-subtitle">Verified internship role where I applied data analytics, SQL, Python, and BI tools to streamline reporting workflows.</p>
         </div>
 
         <div style="max-width: 850px; margin: 0 auto;">
           <div class="card-base">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
               <div>
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Data Analyst Intern — Sun Square Pvt. Ltd.</h3>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Data Analyst Intern — Sun Square Pvt. Ltd.</h3>
+                  <a href="intern.pdf" target="_blank" rel="noopener noreferrer" title="View Internship Certificate" class="cert-eye-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                </div>
                 <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">Internship Role</span>
               </div>
-              <span class="font-mono" style="font-size: 0.8rem; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">1 Month | India</span>
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="font-mono" style="font-size: 0.8rem; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 0.375rem;">1 Month | India</span>
+              </div>
             </div>
 
                         <ul style="padding-left: 1.2rem; margin: 0.85rem 0; color: var(--text-secondary); font-size: 0.95rem;">
@@ -957,7 +1495,7 @@
     <section id="certifications" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">// 05</div>
+          <div class="section-tag">// 07</div>
           <h2 class="section-title">Certifications</h2>
           <p class="section-subtitle">Official industry certifications in Oracle Cloud Infrastructure, Generative AI, Data Science, Agentic AI, and Professional Skills. Click the eye icon or link to view credentials.</p>
         </div>
@@ -1071,7 +1609,25 @@
             </a>
           </div>
 
-          <!-- 7: Soft Skills — IIT Madras -->
+          <!-- 7: AI Fluency Framework Foundations -->
+          <div class="card-base" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.35rem;">
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); line-height: 1.35;">AI Fluency Framework Foundations</h3>
+                <a href="Claude AI Fluency.pdf" target="_blank" rel="noopener noreferrer" title="View Certificate" class="cert-eye-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </a>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.85rem;">Claude Academy (2026)</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.25rem;"><span class="badge badge-default">Claude Academy</span><span class="badge badge-default">AI Fluency</span><span class="badge badge-default">LLM Frameworks</span></div>
+            </div>
+            <a href="Claude AI Fluency.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Certificate</span>
+            </a>
+          </div>
+
+          <!-- 8: Soft Skills — IIT Madras -->
           <div class="card-base" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.35rem;">
@@ -1096,7 +1652,7 @@
     <section id="education" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">// 06</div>
+          <div class="section-tag">// 08</div>
           <h2 class="section-title">Education Timeline</h2>
           <p class="section-subtitle">Academic foundation in Artificial Intelligence, Machine Learning, and Computer Science.</p>
         </div>
@@ -1156,7 +1712,7 @@
     <section id="contact" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">// 07</div>
+          <div class="section-tag">// 09</div>
           <h2 class="section-title">Let's Build Something</h2>
           <p class="section-subtitle">For internship opportunities, project collaborations, or technical discussions, feel free to reach out.</p>
         </div>
@@ -1237,6 +1793,217 @@
   </footer>
 
     <!-- MODALS -->
+  <!-- SMART INDIA HACKATHON 2026 / TRAVION MODAL -->
+  <div class="modal-overlay" id="modal-sih" onclick="closeModalOnOverlay(event, 'modal-sih')">
+    <div class="modal-content" style="padding: 1.75rem; max-width: 680px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; gap: 1rem;">
+        <div>
+          <span class="badge badge-accent" style="font-family: var(--font-mono); font-size: 0.725rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem;">
+            🏆 SMART INDIA HACKATHON 2026 · SIH26204
+          </span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--text-primary); margin: 0.35rem 0 0.2rem 0; letter-spacing: -0.02em;">TRAVION</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; margin: 0;">AI-Powered End-to-End Travel Companion</p>
+        </div>
+        <button type="button" onclick="closeModal('modal-sih')" style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-muted); cursor: pointer; font-size: 1.1rem; width: 34px; height: 34px; border-radius: 0.375rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all var(--transition-fast);" aria-label="Close modal">✕</button>
+      </div>
+
+      <!-- Overview Box -->
+      <div style="padding: 1rem 1.15rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.625rem; margin-bottom: 1.25rem;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+          TRAVION is an AI-powered travel platform that transforms traditional trip planning into an intelligent, connected journey-management experience. It combines personalized itinerary planning, persistent trip context, dynamic re-planning, AI-assisted booking, location services, and optional human assistance to help travellers adapt to changing conditions throughout their journey.
+        </p>
+      </div>
+
+      <!-- Key Highlights -->
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.65rem;">
+          KEY HIGHLIGHTS
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> AI-Powered Travel Planning
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> Persistent Journey Context
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> Dynamic Journey Re-planning
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> AI-Assisted Booking
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> Weather-Aware Planning
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> GPS-Based Navigation
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> Integrated Travel Services
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #f59e0b; font-weight: 800;">•</span> AI + Human Assistance
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.55rem;">
+          TECH STACK
+        </h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">React.js</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Tailwind CSS</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Python</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">FastAPI</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">LLM APIs</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Ollama</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Local LLMs</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">PostgreSQL</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">SQLite</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Google Maps</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Google Places</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">GPS</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Weather API</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Razorpay</span>
+        </div>
+      </div>
+
+      <!-- Project Status & Details -->
+      <div style="margin-bottom: 1.35rem; padding: 0.9rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span class="font-mono" style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">
+            Smart India Hackathon 2026 · SIH26204 · Travel & Tourism
+          </span>
+          <span style="font-size: 0.75rem; font-weight: 700; color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); padding: 0.15rem 0.55rem; border-radius: 0.35rem;">
+            40% Completed
+          </span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          <strong style="color: var(--text-primary);">Implementation Status:</strong> 40% completed; remaining implementation in progress, as stated in the submitted project document.
+        </p>
+      </div>
+
+      <!-- Action Links & Close Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+          <a href="https://github.com/sri-nikesh-1432/TRAVION" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub Repository</span>
+          </a>
+          <a href="https://youtu.be/mwk3v8KvH6c" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; background: #dc2626; border-color: #dc2626; color: #ffffff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>Demo Video 📺</span>
+          </a>
+        </div>
+        <button type="button" onclick="closeModal('modal-sih')" class="btn btn-outline btn-sm" style="cursor: pointer; padding: 0.35rem 0.85rem;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MSME HACKATHON 2026 / AIRA OS MODAL -->
+  <div class="modal-overlay" id="modal-msme" onclick="closeModalOnOverlay(event, 'modal-msme')">
+    <div class="modal-content" style="padding: 1.75rem; max-width: 680px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; gap: 1rem;">
+        <div>
+          <span class="badge badge-accent" style="font-family: var(--font-mono); font-size: 0.725rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem;">
+            🏆 MSME HACKATHON 2026 · SHORTLISTED PROJECT
+          </span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--text-primary); margin: 0.35rem 0 0.2rem 0; letter-spacing: -0.02em;">AIRA OS</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; margin: 0;">Multi-Agent AI Orchestration System</p>
+        </div>
+        <button type="button" onclick="closeModal('modal-msme')" style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-muted); cursor: pointer; font-size: 1.1rem; width: 34px; height: 34px; border-radius: 0.375rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all var(--transition-fast);" aria-label="Close modal">✕</button>
+      </div>
+
+      <!-- Overview Box -->
+      <div style="padding: 1rem 1.15rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 0.625rem; margin-bottom: 1.25rem;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+          AIRA OS is a multi-agent AI platform that orchestrates specialized AI agents to transform a single idea into a complete, production-ready software project.
+        </p>
+      </div>
+
+      <!-- Key Highlights -->
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.65rem;">
+          KEY HIGHLIGHTS
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> Central AI Orchestration
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> 9 Specialized AI Agents
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> Automated Research & Architecture
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> Full-Stack Code Generation
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> AI-Powered QA & Validation
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> Business & Documentation Generation
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> Docker-Ready Deployment
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-primary); background: var(--bg-tertiary); padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid var(--border-subtle);">
+            <span style="color: #6366f1; font-weight: 800;">•</span> MSME Compliance Analysis
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div style="margin-bottom: 1.35rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.55rem;">
+          TECH STACK
+        </h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Next.js</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">TypeScript</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Python</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">FastAPI</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">LangGraph</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">LangChain</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Gemini</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Tailwind CSS</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">SSE</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">WebSocket</span>
+          <span class="tech-tag" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Docker</span>
+        </div>
+      </div>
+
+      <!-- Achievement & Close Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 0.75rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: #fbbf24; background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.25); padding: 0.35rem 0.75rem; border-radius: 0.4rem;">
+          <span>🏆 Shortlisted — MSME Hackathon 2026</span>
+        </div>
+        <button type="button" onclick="closeModal('modal-msme')" class="btn btn-outline btn-sm" style="cursor: pointer; padding: 0.35rem 0.85rem;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-travion" onclick="closeModalOnOverlay(event, 'modal-travion')">
+    <div class="modal-content" style="padding: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.25rem; font-weight: 700;">TRAVION — Case Study</h3>
+        <button onclick="closeModal('modal-travion')" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.25rem;">✕</button>
+      </div>
+      <p style="color: var(--text-secondary); font-weight: 600; margin-bottom: 1rem;">AI-Powered End-to-End Travel Companion</p>
+      <div style="padding: 1rem; background: var(--code-bg); color: var(--code-text); border-radius: 0.5rem; font-family: var(--font-mono); font-size: 0.825rem; margin-bottom: 1rem;">
+        React Native & Expo UI → TypeScript → FastAPI Microservices → MySQL Persistent Data Layer → Agentic AI Itinerary & Re-planning Engine
+      </div>
+      <p style="margin-bottom: 1rem; font-size: 0.9rem;">An intelligent travel platform that combines AI itinerary planning, dynamic trip re-planning, real-time travel assistance, location services, and personalized recommendations into a persistent trip experience.</p>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+        <a href="https://github.com/BhuvanSai124" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub Repository</a>
+        <a href="https://travions.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Launch Live Demo 🔗</a>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-iplytics" onclick="closeModalOnOverlay(event, 'modal-iplytics')">
     <div class="modal-content" style="padding: 1.75rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -1452,7 +2219,7 @@
       if (progressEl) progressEl.style.width = scrolled + '%';
 
       // Active Section Highlighting
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'education', 'contact'];
+      const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       sections.forEach(id => {
@@ -1490,7 +2257,8 @@
       });
 
       document.querySelectorAll('.project-card').forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-proj-cat') === cat) {
+        const cardCats = (card.getAttribute('data-proj-cat') || '').split(' ');
+        if (cat === 'all' || cardCats.includes(cat)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
